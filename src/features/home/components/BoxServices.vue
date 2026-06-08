@@ -122,8 +122,18 @@ const SERVICES_DE = [
   { name: "Echtzeit-Mehrspieler" },
 ] as const satisfies { name: string }[];
 
+const SERVICES_ZH = [
+  { name: "Three.js & WebGL" },
+  { name: "Node.js & WebSockets" },
+  { name: "React & Vue" },
+  { name: "Kubernetes & Redis" },
+  { name: "实时多人游戏" },
+] as const satisfies { name: string }[];
+
 const services = computed(() => {
-  return locale.value === "en" ? SERVICES_EN : SERVICES_DE;
+  if (locale.value === "en") return SERVICES_EN;
+  if (locale.value === "zh") return SERVICES_ZH;
+  return SERVICES_DE;
 });
 </script>
 
