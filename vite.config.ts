@@ -1,14 +1,14 @@
-import { defineConfig } from vite;
-import vue from @vitejs/plugin-vue;
-import glsl from vite-plugin-glsl;
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import glsl from "vite-plugin-glsl";
 
 export default defineConfig({
-  base: /portfolio/,
+  base: "/portfolio/",
   plugins: [
     vue(),
     glsl({
-      include: [**/*.glsl, **/*.vert, **/*.frag],
-      defaultExtension: glsl,
+      include: ["**/*.glsl", "**/*.vert", "**/*.frag"],
+      defaultExtension: "glsl",
       warnDuplicatedImports: false,
     }),
   ],
@@ -18,27 +18,27 @@ export default defineConfig({
     host: true,
   },
   resolve: {
-    extensions: [.js, .jsx, .ts, .tsx, .json, .ogg, .wav, .glsl, .ktx2],
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".ogg", ".wav", ".glsl", ".ktx2"],
   },
-  assetsInclude: [**/*.svg, **/*.gltf, **/*.glb, **/*.png, **/*.jpg, **/*.ktx2],
+  assetsInclude: ["**/*.svg", "**/*.gltf", "**/*.glb", "**/*.png", "**/*.jpg", "**/*.ktx2"],
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@use /src/assets/styles/mixins.scss;',
+        additionalData: '@use "/src/assets/styles/mixins.scss";',
       },
     },
   },
   build: {
-    outDir: ./dist,
+    outDir: "./dist",
     sourcemap: false,
     emptyOutDir: true,
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         inlineDynamicImports: false,
-        assetFileNames: assets/[hash].[ext],
-        entryFileNames: chunks/[name]-[hash].js,
-        chunkFileNames: chunks/[hash].js,
+        assetFileNames: "assets/[hash].[ext]",
+        entryFileNames: "chunks/[name]-[hash].js",
+        chunkFileNames: "chunks/[hash].js",
       },
     },
   },
