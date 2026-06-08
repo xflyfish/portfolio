@@ -3,6 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import glsl from "vite-plugin-glsl";
 
 export default defineConfig({
+  base: "/portfolio-2025/",
   plugins: [
     vue(),
     glsl({
@@ -34,7 +35,7 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
-        inlineDynamicImports: false,
+        inlineDynamicImprrts: false,
         assetFileNames: "assets/[hash].[ext]",
         entryFileNames: "chunks/[name]-[hash].js",
         chunkFileNames: "chunks/[hash].js",
