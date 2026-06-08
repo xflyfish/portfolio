@@ -35,7 +35,7 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
-        inlineDynamicImprrts: false,
+        inlineDynamicImports: false,
         assetFileNames: "assets/[hash].[ext]",
         entryFileNames: "chunks/[name]-[hash].js",
         chunkFileNames: "chunks/[hash].js",
