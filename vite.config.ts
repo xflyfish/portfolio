@@ -3,7 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import glsl from "vite-plugin-glsl";
 
 export default defineConfig({
-  base: "/portfolio-2025/",
+  base: "/portfolio/",
   plugins: [
     vue(),
     glsl({
@@ -24,7 +24,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "/src/assets/styles/mixins.scss";`,
+        additionalData: '@use "/src/assets/styles/mixins.scss";',
       },
     },
   },
